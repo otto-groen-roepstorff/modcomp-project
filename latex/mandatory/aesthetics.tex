@@ -1,0 +1,73 @@
+
+\usepackage[margin=1 in]{geometry} % Pakke til sidemargin
+\setlength {\marginparwidth }{2cm}
+\usepackage{times}
+
+%-------------------------------------------------%
+%HEADER FOOTER%
+%-------------------------------------------------
+\usepackage{fancyhdr}
+
+\fancyhf{} % Clear header and footer
+\setlength{\headheight}{16pt} % Set the head height to a larger value
+%\addtolength{\topmargin}{-1.6pt} % Adjust the top margin to compensate for the increased head height
+
+
+
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+
+\fancypagestyle{myheadings}{%
+    \setlength{\headheight}{15 pt}
+    \fancyhf{}
+    %Header options
+    \renewcommand{\headrulewidth}{0.5pt}
+    \addtolength{\headheight}{0.5pt}
+        \fancyhead[L]{\bfseries\rightmark}
+        \fancyfoot[C]{\thepage}
+
+    %Footer options
+    \renewcommand{\footrulewidth}{0pt}
+    
+}
+    
+  
+
+
+
+
+
+
+
+% Counters
+\counterwithin{equation}{section}
+%--------------------------------------------------%
+%SÆTNINGER, THEOREMS .E.T.C styles
+%----------------------------------------------------%'
+%Theorem styles
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[subsection]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{ex}[thm]{Example}
+
+% Capitalize the names for cleveref
+\crefname{thm}{Theorem}{Theorems}
+\crefname{lem}{Lemma}{Lemmata}
+\crefname{cor}{Corollary}{Corollaries}
+\crefname{prop}{Proposition}{Propositions}
+\crefname{defn}{Definition}{Definitions}
+\crefname{rem}{Remark}{Remarks}
+\crefname{ex}{Example}{Examples}
+\crefname{section}{Section}{Sections}
+\crefname{subsection}{Subsection}{Subsections}
+\crefname{figure}{Figure}{Figures}
+\crefname{align}{Eq.}{Eqs.}
+\crefname{equation}{Eq.}{Eqs.}
+\crefname{table}{Table}{Tables}
