@@ -1,0 +1,10 @@
+\section{Learning of the parameters}
+
+Given our model, we are interested in learning the parameters $\alpha$, $\beta$, $\gamma$, $\lambda_0$ and $\lambda_1$ that generate our data. This is ideally done using only $\pmb X$, since this is all that we actually observe. 
+
+Let us first pretend we observe all variables $C_1, \ldots, C_t$, $\pmb Z$ and $\pmb X$ and we want to estimate our parameters. We can then estimate our parameters as
+\[\hat \lambda_0 = \frac{1}{nT} \sum_{t=1}^T \sum_{i=1}^n X_{t,i} \mathbb{1} (Z_{t,i} = 0)\]
+\[\hat \lambda_1 = \frac{1}{nT} \sum_{t=1}^T \sum_{i=1}^n X_{t,i} \mathbb{1} (Z_{t,i} = 1)\]
+
+\[\hat \alpha = \frac{1}{2nT} \sum_{t=1}^T \sum_{i=1}^n \mathbb{1} (Z_{t,i} = 0 ) \mathbb{1} (C_{t,i} = 0 )  + \mathbb 1 (Z_{t,i} = 1) \mathbb{1} (C_{t,i} = 1 )\]
+

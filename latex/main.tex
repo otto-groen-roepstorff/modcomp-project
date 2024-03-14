@@ -1,21 +1,38 @@
 % Practical stuff
 \documentclass[12pt, a4paper]{article} 
 % \documentclass[titlepage]{article}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{bm}
+\usepackage{unicode-math}
 
+
+\setmathfont{NewCMMath-Book}
 \input{latex/mandatory/packages}
 \input{latex/mandatory/commands}
 \input{latex/mandatory/aesthetics}
 
 \begin{document}
 
+\tableofcontents
+
 %------------------------
 %Sections
 %------------------------
+
 \pagestyle{myheadings}
 \pagenumbering{arabic}
 
+\newpage
+
 \input{latex/sections/introduction}
 
+\input{latex/sections/Part1}
 
+\input{latex/sections/Part2}
+
+
+\input{latex/sections/Part3}
 
 \end{document}
